@@ -1,0 +1,54 @@
+{
+  "name": "safe-rust",
+  "displayName": "Safe Rust",
+  "version": "1.0.0",
+  "description": "Safety-critical Rust development with 9-layer Swiss Cheese verification model. Features upfront design review, automated gate validation, and iterative refinement loops.",
+  "longDescription": "A comprehensive Claude Code plugin for developing safety-critical Rust applications. Implements the Swiss Cheese model with 9 verification layers: Requirements, Architecture, TDD, Implementation, Static Analysis, Formal Verification, Dynamic Analysis, Independent Review, and Safety Case. Supports ISO 26262 (ASIL), IEC 61508 (SIL), and DO-178C (DAL) safety standards.",
+  "author": {
+    "name": "Safety Systems",
+    "email": "safety@example.com",
+    "url": "https://github.com/safety-systems"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/safety-systems/swiss-cheese"
+  },
+  "license": "MIT",
+  "categories": [
+    "development",
+    "safety",
+    "verification",
+    "rust"
+  ],
+  "tags": [
+    "rust",
+    "safety-critical",
+    "swiss-cheese",
+    "formal-verification",
+    "tdd",
+    "iso-26262",
+    "iec-61508",
+    "do-178c",
+    "asil",
+    "sil",
+    "embedded",
+    "automotive",
+    "aerospace"
+  ],
+  "pricing": {
+    "type": "free"
+  },
+  "pluginPath": "./swiss-cheese",
+  "icon": "shield-check",
+  "screenshots": [],
+  "changelog": {
+    "1.0.0": "Initial release with 9-layer verification model"
+  },
+  "minClaudeCodeVersion": "1.0.0",
+  "keywords": [
+    "safety",
+    "rust",
+    "verification",
+    "formal-methods"
+  ]
+}
