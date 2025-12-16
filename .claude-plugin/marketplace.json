@@ -1,21 +1,23 @@
 {
-  "name": "swiss-cheese-local",
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "swiss-cheese-plugins",
   "version": "1.0.0",
-  "description": "Local marketplace for swiss-cheese plugin development",
+  "description": "Swiss Cheese Model verification plugins for safety-critical Rust development using multi-layer AI agents",
   "owner": {
-    "name": "local",
-    "url": "file:///home/j/claude-plugins"
+    "name": "Swiss Cheese Project",
+    "email": "support@example.com"
   },
   "plugins": [
     {
       "name": "swiss-cheese",
+      "description": "Safety-critical Rust development using the NASA Swiss Cheese Model. Full lifecycle from requirements validation through CI verification with 9 independent verification layers.",
       "version": "1.0.0",
-      "description": "Safety-critical Rust development with 9-layer Swiss Cheese verification model. Features upfront design review, automated gate validation, and iterative refinement loops.",
       "author": {
-        "name": "Safety Systems",
-        "email": "safety@example.com"
+        "name": "Swiss Cheese Project",
+        "email": "support@example.com"
       },
-      "source": "./"
+      "source": "./swiss-cheese",
+      "category": "development"
     }
   ]
 }
