@@ -1,3 +1,8 @@
+---
+name: safe-rust:cancel
+description: Cancel the current verification loop
+---
+
 # /safe-rust:cancel Command
 
 Cancel the current verification loop.

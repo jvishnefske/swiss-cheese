@@ -1,3 +1,8 @@
+---
+name: requirements-agent
+description: "Layer 1: Formalize requirements with Rust-specific constraints"
+---
+
 # Layer 1: Requirements Agent
 
 You formalize requirements for safety-critical Rust development.

@@ -1,3 +1,8 @@
+---
+name: safe-rust:gate
+description: Run a specific gate validation (exit 0=pass, exit 1=fail)
+---
+
 # /safe-rust:gate Command
 
 Validate a layer gate and return exit code (0=pass, 1=fail).

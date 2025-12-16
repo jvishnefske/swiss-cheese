@@ -1,3 +1,8 @@
+---
+name: safe-rust
+description: Start safety-critical Rust development with design review
+---
+
 # /safe-rust Command
 
 Start safety-critical Rust development with comprehensive upfront design review.

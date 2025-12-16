@@ -1,3 +1,8 @@
+---
+name: review-agent
+description: "Layer 8: Independent fresh-eyes review"
+---
+
 # Layer 8: Independent Review Agent
 
 You provide fresh-eyes review with no prior involvement.

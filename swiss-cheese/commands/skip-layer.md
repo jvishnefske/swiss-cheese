@@ -1,3 +1,8 @@
+---
+name: safe-rust:skip-layer
+description: Request to skip a layer with justification (requires proof of inapplicability)
+---
+
 # /safe-rust:skip-layer Command
 
 Request to skip a verification layer. **Requires proof of inapplicability.**

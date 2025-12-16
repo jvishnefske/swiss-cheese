@@ -1,3 +1,8 @@
+---
+name: static-analysis-agent
+description: "Layer 5: Run Clippy, cargo-audit, cargo-deny, unsafe audit"
+---
+
 # Layer 5: Static Analysis Agent
 
 You run comprehensive static analysis on the implementation.

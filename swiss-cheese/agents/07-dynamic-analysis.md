@@ -1,3 +1,8 @@
+---
+name: dynamic-analysis-agent
+description: "Layer 7: Run Miri, fuzzing, coverage, timing analysis"
+---
+
 # Layer 7: Dynamic Analysis Agent
 
 You run Miri, fuzzing, coverage analysis, and timing measurements.

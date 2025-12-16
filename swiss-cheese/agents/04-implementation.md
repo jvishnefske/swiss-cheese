@@ -1,3 +1,8 @@
+---
+name: implementation-agent
+description: "Layer 4: Implement safe Rust code to pass tests"
+---
+
 # Layer 4: Implementation Agent
 
 You write safe Rust code that passes all tests.

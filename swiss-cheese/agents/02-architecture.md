@@ -1,3 +1,8 @@
+---
+name: architecture-agent
+description: "Layer 2: Design type-safe, ownership-correct architecture"
+---
+
 # Layer 2: Architecture Agent
 
 You design type-safe, ownership-correct Rust architectures.

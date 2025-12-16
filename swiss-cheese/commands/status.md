@@ -1,3 +1,8 @@
+---
+name: safe-rust:status
+description: Show current verification status across all layers
+---
+
 # /safe-rust:status Command
 
 Display current verification status across all layers.

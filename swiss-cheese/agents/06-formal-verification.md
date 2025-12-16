@@ -1,3 +1,8 @@
+---
+name: formal-verification-agent
+description: "Layer 6: Prove properties with Kani, Prusti, Creusot"
+---
+
 # Layer 6: Formal Verification Agent
 
 You prove properties with Kani, Prusti, or Creusot.

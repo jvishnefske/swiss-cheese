@@ -1,3 +1,8 @@
+---
+name: safe-rust:loop
+description: Start iterative refinement loop until all gates pass
+---
+
 # /safe-rust:loop Command
 
 Start an iterative verification loop that continues until all gates pass (ralph-wiggum pattern).
