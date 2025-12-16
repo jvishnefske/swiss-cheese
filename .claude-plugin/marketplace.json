@@ -2,8 +2,8 @@
   "name": "safe-rust",
   "displayName": "Safe Rust",
   "version": "1.0.0",
-  "description": "Safety-critical Rust development with 9-layer Swiss Cheese verification model. Features upfront design review, automated gate validation, and iterative refinement loops.",
-  "longDescription": "A comprehensive Claude Code plugin for developing safety-critical Rust applications. Implements the Swiss Cheese model with 9 verification layers: Requirements, Architecture, TDD, Implementation, Static Analysis, Formal Verification, Dynamic Analysis, Independent Review, and Safety Case. Supports ISO 26262 (ASIL), IEC 61508 (SIL), and DO-178C (DAL) safety standards.",
+  "description": "Iterative Rust software development lifecycle tooling with multi-layer defect escape reduction methodology.",
+  "longDescription": "This plugin provides a structured approach to the Rust software development lifecycle incorporating iterative verification activities across nine process layers. The methodology is derived from the Swiss Cheese defect escape model, wherein multiple sequential verification gates reduce the probability of latent defects propagating to subsequent lifecycle phases. Layers include requirements formalization, architectural review, test-driven development, implementation verification, static analysis, formal methods integration, dynamic analysis, independent review, and documentation assembly. This tooling is provided as-is for educational and process improvement purposes. THIS PLUGIN DOES NOT CONSTITUTE SAFETY CERTIFICATION AND PROVIDES NO WARRANTY OF FITNESS FOR ANY PURPOSE. Users deploying software in safety-critical, life-critical, or mission-critical applications bear sole responsibility for all verification, validation, and certification activities required by applicable standards and regulatory bodies. The authors and contributors explicitly disclaim all liability for defects, defect escapes, incidents, or damages arising from use of this tooling.",
   "author": {
     "name": "Safety Systems",
     "email": "safety@example.com",
@@ -14,26 +14,24 @@
     "url": "https://github.com/safety-systems/swiss-cheese"
   },
   "license": "MIT",
+  "disclaimer": "THIS SOFTWARE IS PROVIDED AS-IS WITHOUT WARRANTY. NOT CERTIFIED FOR SAFETY-CRITICAL USE. Users assume all responsibility for verification, validation, and regulatory compliance. Authors disclaim all liability for defect escapes, incidents, or damages.",
   "categories": [
     "development",
-    "safety",
     "verification",
-    "rust"
+    "rust",
+    "process"
   ],
   "tags": [
     "rust",
-    "safety-critical",
-    "swiss-cheese",
-    "formal-verification",
-    "tdd",
-    "iso-26262",
-    "iec-61508",
-    "do-178c",
-    "asil",
-    "sil",
-    "embedded",
-    "automotive",
-    "aerospace"
+    "sdlc",
+    "software-development-lifecycle",
+    "defect-escape",
+    "iterative",
+    "verification",
+    "process-improvement",
+    "static-analysis",
+    "formal-methods",
+    "code-review"
   ],
   "pricing": {
     "type": "free"
@@ -42,13 +40,14 @@
   "icon": "shield-check",
   "screenshots": [],
   "changelog": {
-    "1.0.0": "Initial release with 9-layer verification model"
+    "1.0.0": "Initial release incorporating multi-layer verification process gates"
   },
   "minClaudeCodeVersion": "1.0.0",
   "keywords": [
-    "safety",
+    "sdlc",
     "rust",
     "verification",
-    "formal-methods"
+    "defect-escape",
+    "iterative"
   ]
 }
