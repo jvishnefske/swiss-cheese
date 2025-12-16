@@ -102,7 +102,7 @@
         "path": "./hooks/stop-hook.sh"
       }
     ],
-    "Start": [ {"path": "./hooks/start-hook.sh"}]
+    "Start": [ {"path": "./hooks/sesson-start.sh"}]
   },
   "skills": [
     {

@@ -1,6 +1,6 @@
 # Safe Rust Plugin
 
-A Claude Code plugin for safety-critical Rust development using the 9-layer Swiss Cheese verification model.
+A Claude Code plugin providing iterative Rust software development lifecycle tooling with multi-layer defect escape reduction methodology.
 
 ## Features
 
@@ -24,7 +24,7 @@ A Claude Code plugin for safety-critical Rust development using the 9-layer Swis
 
 ```bash
 # Start with design review
-/safe-rust "CAN-based motor controller for ASIL-C"
+/safe-rust "CAN-based motor controller"
 
 # Answer all design review questions...
 
@@ -48,7 +48,7 @@ A Claude Code plugin for safety-critical Rust development using the 9-layer Swis
 
 ```
 ┌─────────────────────────────────────────────────────────┐
-│ Layer 9: Safety Analysis    → Gate 9 (exit 0/1)        │
+│ Layer 9: Release Analysis   → Gate 9 (exit 0/1)        │
 ├─────────────────────────────────────────────────────────┤
 │ Layer 8: Independent Review → Gate 8 (exit 0/1)        │
 ├─────────────────────────────────────────────────────────┤
@@ -89,7 +89,7 @@ A Claude Code plugin for safety-critical Rust development using the 9-layer Swis
 The Orchestrator asks ALL questions upfront:
 
 1. **Functional**: What, inputs, outputs, timing
-2. **Safety**: Level, hazards, safe state
+2. **Risk**: Failure modes, mitigations, fallback behavior
 3. **Rust**: no_std, panic policy, target
 4. **Verification**: Tools, coverage, timing
 5. **Skips**: Pre-approved layer skips
@@ -133,8 +133,8 @@ Invalid: "We don't have time"
 │   ├── layer-6/          # Formal verification
 │   ├── layer-7/          # Dynamic analysis
 │   ├── layer-8/          # Review findings
-│   └── layer-9/          # Safety case
-└── release/              # Certification package
+│   └── layer-9/          # Release case
+└── release/              # Release package
 ```
 
 ## Hooks
@@ -160,15 +160,15 @@ Invalid: "We don't have time"
 - `formal-verification-agent`: Layer 6
 - `dynamic-analysis-agent`: Layer 7
 - `review-agent`: Layer 8
-- `safety-agent`: Layer 9
+- `release-agent`: Layer 9
 
-## Safety Standards
+## Disclaimer
 
-Supports:
-- ISO 26262 (ASIL-A to ASIL-D)
-- IEC 61508 (SIL-1 to SIL-4)
-- DO-178C (DAL-A to DAL-E)
-- Ferrocene-qualified Rust
+THIS SOFTWARE IS PROVIDED AS-IS WITHOUT WARRANTY OF ANY KIND. This plugin is intended for educational and process improvement purposes only. It does not constitute certification tooling and provides no guarantee of defect escape reduction.
+
+Users deploying software in regulated, mission-critical, or high-reliability applications bear sole responsibility for all verification, validation, and compliance activities required by applicable standards and regulatory bodies.
+
+The authors and contributors explicitly disclaim all liability for defects, defect escapes, incidents, or damages arising from use of this tooling.
 
 ## License
 
