@@ -1,0 +1,12 @@
+# Claude Agent SDK - latest version 0.1.17
+claude-agent-sdk>=0.1.17
+
+# TOML parsing - tomli is needed for Python < 3.11
+# (Python 3.11+ has tomllib in stdlib)
+tomli>=2.0.0; python_version < "3.11"
+
+# Standard library modules used (no install needed):
+# - graphlib: Topological sorting (Python 3.9+)
+# - asyncio: Async orchestration
+# - subprocess: Gate execution
+# - json/xml: Report generation

@@ -1,0 +1,19 @@
+# Environment
+.env
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Reports output
+reports/output/
+*.html
+*.xml
+
+# Git worktrees managed by orchestrator
+.worktrees/
+
+# IDE
+.idea/
+.vscode/
+*.swp
