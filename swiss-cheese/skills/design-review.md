@@ -1,3 +1,7 @@
+---
+description: Use this skill when the user needs guidance on conducting upfront design reviews for safety-critical Rust components, asking requirements questions, or generating design specifications.
+---
+
 # Design Review Skill
 
 This skill provides guidance for conducting comprehensive upfront design reviews for safety-critical Rust components.
@@ -61,65 +65,43 @@ Establish WHICH layers apply:
 - Validate skip criteria before approving
 - Document approved skips in design spec
 
-## Question Phrasing
+## Output: design.toml
 
-Questions should be:
+After all questions are answered, generate `design.toml`:
 
-1. **Specific**: Not "what are the requirements?" but "what is the control loop period in microseconds?"
-2. **Bounded**: Provide options where possible
-3. **Complete**: Cover all aspects before proceeding
-4. **Actionable**: Answers directly inform design
+```toml
+[project]
+name = "component-name"
+version = "0.1.0"
+description = "Component description"
+max_iterations = 5
+max_parallel_agents = 4
 
-## Anti-Patterns
+[[requirements]]
+id = "REQ-001"
+title = "Functional Requirement"
+description = "Detailed description from design review"
+priority = "critical"
+acceptance_criteria = [
+    "Testable criterion 1",
+    "Testable criterion 2",
+]
 
-Avoid these design review failures:
+[[requirements]]
+id = "REQ-002"
+title = "Safety Requirement"
+description = "Derived from hazard analysis"
+priority = "critical"
+acceptance_criteria = [
+    "Safe state achieved within deadline",
+    "Fault detection covers all failure modes",
+]
 
-| Anti-Pattern | Problem | Solution |
-|--------------|---------|----------|
-| Incremental questioning | Wastes iterations | Ask ALL questions upfront |
-| Assuming defaults | May be wrong | Explicitly confirm each choice |
-| Skipping safety questions | Hazards missed | Always ask about hazards |
-| Vague timing | WCET undefined | Get specific numbers |
-| "We'll figure it out later" | Scope creep | Resolve before starting |
-
-## Output: Design Specification
-
-After all questions are answered, generate:
-
-```yaml
-design_specification:
-  metadata:
-    component_id: "COMP-XXX"
-    name: "{name}"
-    version: "0.1.0"
-    safety_level: "{level}"
-    created: "{timestamp}"
-    
-  functional:
-    purpose: "{from questions}"
-    inputs: [...]
-    outputs: [...]
-    timing: {...}
-    interfaces: [...]
-    
-  safety:
-    hazards: [...]
-    safe_state: {...}
-    fault_detection: [...]
-    
-  rust:
-    environment: {...}
-    target: {...}
-    policies: {...}
-    
-  verification:
-    scope: {...}
-    targets: {...}
-    tools: [...]
-    
-  layers:
-    skipped: []
-    justifications: {}
+[tasks.parse_requirements]
+layer = "requirements"
+description = "Formalize requirements from design review"
+depends_on = []
+requirements = ["REQ-001", "REQ-002"]
 ```
 
 ## Validation
@@ -133,39 +115,14 @@ Before proceeding, validate:
 - [ ] Rust constraints are compatible with requirements
 - [ ] Skip requests have valid justifications
 
-## Example Complete Design Review
+## Anti-Patterns
 
-```
-User: I need a CAN-based motor controller.
+Avoid these design review failures:
 
-Orchestrator: I'll conduct a design review. Please answer ALL questions:
-
-FUNCTIONAL:
-1. Control loop frequency? → 1ms
-2. CAN protocol? → CANopen
-3. Speed range? → 0-5000 RPM
-4. PWM frequency? → 20kHz
-
-SAFETY:
-5. Safety level? → ASIL-C
-6. Hazards? → Overspeed, uncommanded motion
-7. Safe state? → PWM=0, brake engaged
-8. Detection? → Watchdog, range checking
-
-RUST:
-9. no_std required? → Yes
-10. Target? → STM32F4
-11. Heap allowed? → No
-12. Panic policy? → Forbidden
-
-VERIFICATION:
-13. Kani available? → Yes
-14. Coverage target? → 95%
-15. HIL available? → Yes
-
-SKIPS:
-16. Any layers to skip? → None
-
-→ Design Specification generated
-→ Beginning Layer 1
-```
+| Anti-Pattern | Problem | Solution |
+|--------------|---------|----------|
+| Incremental questioning | Wastes iterations | Ask ALL questions upfront |
+| Assuming defaults | May be wrong | Explicitly confirm each choice |
+| Skipping safety questions | Hazards missed | Always ask about hazards |
+| Vague timing | WCET undefined | Get specific numbers |
+| "We'll figure it out later" | Scope creep | Resolve before starting |
